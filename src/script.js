@@ -1,10 +1,11 @@
+import getCars from '../../api/getCars/index.js';
+
+// Call the function
+
 function displayCars()
 {
     
-    (async function  fetchJSONData() {
-        
-        console.log(res.json());
-    }());
+    let data = getCars();
     console.log("DisplayCars in script.js");
 
 }
