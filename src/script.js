@@ -1,8 +1,10 @@
 function displayCars()
 {
-    fetch('./cars.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
     
-    console.log("The cars should be displayed here");
+    (async function() {
+        const { text } = await( await fetch(`/api/getCars`)).json();
+        console.log(text);
+    }());
+    console.log("DisplayCars in script.js");
+
 }
